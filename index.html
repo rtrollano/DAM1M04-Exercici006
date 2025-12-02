@@ -9,43 +9,62 @@
 </head>
 <body>
     <h1>Formulario y validación RTL</h1>
-    <form>
-        <label for="nombre">Nombre y apellidos</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Raúl Trollano" pattern="[A-Za-z]{5,25}" title="Ha de ser de entre 5 y 25 letras" required>
+    <form class="formulario">
+        <div class="campos">
+            <input type="text" id="nombre" name="nombre" placeholder=" " required>
+            <label class="flotante" class="flotante" for="nombre">Nombre completo</label>
+            <span class="msg">Campo obligatorio</span>
+        </div>
+        <div class="campos">
+        </div>
+        <div class="campos">
+            <label class="flotante" for="email">E-mail</label>
+            <input id="email" type="email" name="email" placeholder=" " required>
+            </div>
+        <div class="campos">
+            <label class="flotante" for="telf">Num. teléfono/móvil</label>
+            <input id="telf" type="tel" name="telf" placeholder=" " pattern="\+\d{1,3}\d{6,14}" title="Es necesario indicar el '+' y el código del país">
+        </div>
+        <div class="campos">
+            <label class="flotante" for="edad">Edad</label>
+            <input type="number" name="edad" id="edad" min="18" max="99" step="5" title="Ha de ser mayor de edad">
+        </div>
+        <div class="campos">
+            <label for="fecha_nacimiento"></label>
+            <input type="date" name="fecha_nacimiento" id="fecha_nacimiento">
+        </div>
+        <div class="campos">
+            <label  for="franja"></label>
+            <input type="time" name="franja" id="franja">
+        </div>
+        <div class="">
+            <label class="" for="aficiones">Color</label>
+            <br><br>
+            <label class="flotante" for="color"></label>
+            <input type="color" name="color" id="color">
+        </div>
+        <br><br>
+        <div class="campos">
+             <label class="" for="aficiones">Estudios</label>
+            <br>
+            <label class="flotante" for="control"></label>
+            <input type="range" name="control" id="control">
+        </div>
+        <label class="campos" for="aficiones">Aficiones</label>
         <br>
-        <label for="email">E-mail</label>
-        <input id="email" type="email" name="email" placeholder="ejemplo@ejemplo.es" required>
-        <br>
-        <label for="telf">Num. teléfono/móvil</label>
-        <input id="telf" type="tel" name="telf" placeholder="+34640908070" pattern="\+\d{1,3}\d{6,14}" title="Es necesario indicar el '+' y el código del país">
-        <br>
-        <label for="edad">Edad</label>
-        <input type="number" name="edad" id="edad" min="18" max="99" step="5" title="Ha de ser mayor de edad">
-        <br>
-        <label for="fecha_nacimiento">Fecha de nacimiento</label>
-        <input type="date" name="fecha_nacimiento" id="fecha_nacimiento">
-        <br>
-        <label for="franja">Franja Horaria</label>
-        <input type="time" name="franja" id="franja">
-        <br>
-        <label for="color">Color</label>
-        <input type="color" name="color" id="color">
-        <br>
-        <label for="control">Control</label>
-        <input type="range" name="control" id="control">
-        <br>
-        <label for="aficiones">Aficiones</label><br>
         <label><input type="checkbox" name="aficiones" id="aficiones" value="lectura"> Lectura</label>
         <label><input type="checkbox" name="aficiones" id="aficiones" value="musica">Música</label>
         <label><input type="checkbox" name="aficiones" id="aficiones" value="viajar">Viajar</label>
         <label><input type="checkbox" name="aficiones" id="aficiones" value="videojuegos">Videojuegos</label>
+        <br><br>
+        <label class="" for="aficiones">Estudios</label>
         <br>
-        <label for="estudios">Estudios</label><br>
-        <label><input type="radio" name="estudios" id="estudios" value="eso" required> ESO</label><br>
-        <label><input type="radio" name="estudios" id="estudios" value="batchiller"> Bachiller</label><br>
-        <label><input type="radio" name="estudios" id="estudios" value="fp"> Formación Profesional</label><br>
-        <label><input type="radio" name="estudios" id="estudios" value="universidad"> Universidad</label><br><br>
-        <label for="pais">País:</label>
+        <label><input type="radio" name="estudios" id="estudios" value="eso" required> ESO</label>
+        <label><input type="radio" name="estudios" id="estudios" value="batchiller"> Bachiller</label>
+        <label><input type="radio" name="estudios" id="estudios" value="fp"> Formación Profesional</label>
+        <label><input type="radio" name="estudios" id="estudios" value="universidad"> Universidad</label>
+        <br><br>
+        <label class="" for="pais">País:</label>
         <select id="pais" name="pais" required>
             <option value="">-- Selecciona un país --</option>
             <option value="es">España</option>
@@ -54,11 +73,13 @@
             <option value="it">Alemania</option>
         </select>
         <br><br>
-        <label for="comentarios">Comentarios:</label><br>
-        <textarea id="comentarios" name="comentarios" rows="4" cols="40" placeholder="Escrive aquí tus comentarios..." required></textarea>
-        <br><br><br>
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Borrar">
+        <div class="campos">
+            <label class="flotante" for="comentarios"></label>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="40" placeholder="Escribe aquí tus comentarios..." required></textarea>
+        </div>
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar</button>
+
     </form>
 </body>
 </html>

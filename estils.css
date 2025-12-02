@@ -1,0 +1,84 @@
+body, h1 {
+  align-items: center;
+  background: whi;
+  justify-content: center;
+  font-family: "Edu VIC WA NT Hand Pre", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 250;
+  letter-spacing: 4px;
+
+}
+
+.campos {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.campos input {
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 10px;
+  transition: border-color 0.3s ease;
+  width: 25%;
+}
+
+.campos input:focus {
+  border-color: purple;
+  outline: none;
+}
+
+.flotante {
+  background-color: white;
+  color: #81888f !important;
+  font-size: 16px;
+  left: 12px;
+  padding: 0 4px;
+  pointer-events: none;
+  position: absolute !important;
+  top: 10px;
+  transition: all 0.3s ease;
+}
+
+.campos:has(input:focus) .flotante,
+.campos input:not(:placeholder-shown) + .flotante {
+  color: purple!important;
+  font-size: 12px;
+  top: -8px;
+}
+
+.msg {
+  bottom: -18px;
+  color: orangered;
+  font-size: 12px;
+  left: 4px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 0.4s ease;
+}
+
+.campos input:invalid:focus ~ .msg,
+.campos input:invalid:not(:placeholder-shown) ~ .msg {
+  opacity: 1;
+}
+
+button {
+  background: green;
+  border: 3px solid black;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  width: 10%;
+  gap: 20%;
+}
+
+button:hover {
+  background: black;
+  border: 3px solid green;
+
+}
