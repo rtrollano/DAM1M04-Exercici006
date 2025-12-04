@@ -1,20 +1,16 @@
-.com textarea:focus {
-  border: 41x solid purple;
-  border-radius: 8px;
-  border-color: purple;
-
-}
 body {
-margin: 5%;
-  background:#eee;
-}
+  }
 form {
 background:#fff;
 border-radius: 20px;
 padding: 5%;
-border: 2px solid;
-}
+border: 10px solid purple;
 
+}
+h1 {
+text-align:center;;
+
+}
 body, h1 {
   align-items: center;
   justify-content: center;
@@ -80,7 +76,7 @@ body, h1 {
 }
 
 button {
-  background: green;
+  background: purple;
   border: 3px solid black;
   border-radius: 10px;
   color: white;
@@ -93,10 +89,35 @@ button {
 
 button:hover {
   background: black;
-  border: 3px solid green;
+  border: 3px solid purple;
 
 }
+input[type="color"] {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 100%;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: purple; 
+    cursor: pointer;
+}
+select, textarea {
+    width: 275px;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-size: 15px;
+}
+select, textarea:focus {
+      border: 2px solid purple;
 
+}
 
 /*Parte 2*/
 .topnav {
@@ -143,6 +164,8 @@ button:hover {
  body {
     margin: 5%;
     max-width: 1264px;
+      height: 1650px;
+
   }
   .espacio {
     display: flex;
@@ -152,10 +175,21 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
   }
+  .creascroll {
+  align-items: center;
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+}
 }
 @media (min-width: 768px) {
   body {
-    max-width: 1264px;
+    margin: auto;
+    max-width: 50%;
+    background:#eee;
     
+  }
+  #intera {
+    margin-top: 2%
   }
 }
