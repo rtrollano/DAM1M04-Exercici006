@@ -6,12 +6,17 @@
 }
 body {
 margin: 5%;
-
+  background:#eee;
+}
+form {
+background:#fff;
+border-radius: 20px;
+padding: 5%;
+border: 2px solid;
 }
 
 body, h1 {
   align-items: center;
-  background:#eee;
   justify-content: center;
   font-family: "Edu VIC WA NT Hand Pre", cursive;
   font-optical-sizing: auto;
@@ -27,7 +32,7 @@ body, h1 {
 }
 
 .campos input {
-  border: 2px solid #ccc;
+  border: 2px solid;
   border-radius: 6px;
   font-size: 16px;
   padding: 10px;
@@ -41,14 +46,13 @@ body, h1 {
 }
 
 .flotante {
-  background-color: #eee;
   color: #81888f !important;
   font-size: 16px;
-  left: 12px;
+  left: 10px;
   padding: 0 4px;
   pointer-events: none;
   position: absolute !important;
-  top: 10px;
+  top: 5px;
   transition: all 0.3s ease;
 }
 
@@ -56,7 +60,7 @@ body, h1 {
 .campos input:not(:placeholder-shown) + .flotante {
   color: purple!important;
   font-size: 12px;
-  top: -8px;
+  top: -17px;
 }
 
 .msg {
@@ -91,4 +95,67 @@ button:hover {
   background: black;
   border: 3px solid green;
 
+}
+
+
+/*Parte 2*/
+.topnav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 65px;
+  align-items: center;
+  justify-content: center;
+  gap: 60%;
+  padding: 0 10px;
+  backdrop-filter: blur(10px) saturate(40%);
+  background-color: rgb(127, 240, 113, 0.5);
+  border-radius: 15px;
+
+}
+.topnav .menu {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+.topnav .menu a {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+.colormenu {
+  color:black;
+  text-decoration: none;
+
+}
+.colormenu:hover {
+  color:white;
+  letter-spacing: 3px;
+  box-shadow: 10px 10px 10px black;
+}
+
+/*Adaptaciones*/
+
+@media (max-width: 768px) {
+ body {
+    margin: 5%;
+    max-width: 1264px;
+  }
+  .espacio {
+    display: flex;
+    flex-wrap: wrap;
+  }
+   .tabla {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    max-width: 1264px;
+    
+  }
 }
